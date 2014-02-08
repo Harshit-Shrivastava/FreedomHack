@@ -24,7 +24,7 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a href="index.php" class="navbar-brand" style="font-size:30px;font-family:'Trebuchet MS', Helvetica, sans-serif;">
+				<a href="index" class="navbar-brand" style="font-size:30px;font-family:'Trebuchet MS', Helvetica, sans-serif;">
 					<b><font color="#CCCCCC">Go</font><font color="#9B9B9B">Green</font></b>
 				</a>
 			</div>
@@ -32,10 +32,10 @@
 			<!--Creating other links and button in navbar-->
 			<div class="navbar-collapse collapse">
 				<ul class="nav navbar-nav">
-					<li><a href="mails">Mails</a></li>
-					<li><a href="new_plans">New Plans</a></li>
-					<li><a href="faqs">FAQs</a></li>
-					<li><a href="settings">Settings</a></li>
+					<li><a href="ui/mails">Mails</a></li>
+					<li><a href="ui/new_plans">New Plans</a></li>
+					<li><a href="ui/faqs">FAQs</a></li>
+					<li><a href="ui/settings">Settings</a></li>
 				</ul>
 			</div>
 		</div>
