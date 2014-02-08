@@ -1,0 +1,139 @@
+@import "css/bootstrap";
+
+.sml-nav-shade
+{
+	font-size:18px;
+	font-family:"Trebuchet MS", Helvetica, sans-serif;
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#164069), to(#476C91)); 
+	/* Safari 5.1, Chrome 10+ */ 
+	background: -webkit-linear-gradient(top, #164069, #476C91); 
+	/* Firefox 3.6+ */ 
+	background: -moz-linear-gradient(top, #164069, #476C91);  /**/
+	/* IE 10 */ 
+	background: -ms-linear-gradient(top, #164069, #476C91); 
+	/* Opera 11.10+ */ 
+	background: -o-linear-gradient(top, #164069, #476C91);
+	
+}
+
+.navbar-default .navbar-nav > li > a
+{
+	color:#CCCCCC !important;
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#164069), to(#476C91));
+	background: -webkit-linear-gradient(top, #164069, #476C91);
+	background: -moz-linear-gradient(top, #164069, #476C91);
+	background: -ms-linear-gradient(top, #164069, #476C91);
+	background: -o-linear-gradient(top, #164069, #476C91);
+	display:block;
+}
+
+.navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus
+{
+	color:black !important;
+	border-radius:15px 15px 0px 0px;
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#194775), to(#A2B3C3)) !important;
+	background: -webkit-linear-gradient(top, #194775, #A2B3C3) !important;
+	background: -moz-linear-gradient(top, #194775, #A2B3C3) !important;
+	background: -ms-linear-gradient(top, #194775, #A2B3C3) !important;
+	background: -o-linear-gradient(top, #194775, #A2B3C3) !important;
+	display:block;
+}
+
+.sml-dropdown-menu
+{
+	font-size:16px;
+}
+
+.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus
+{
+	color:black !important;
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#194775), to(#A2B3C3)) !important;
+	background: -webkit-linear-gradient(top, #194775, #A2B3C3) !important;
+	background: -moz-linear-gradient(top, #194775, #A2B3C3) !important;
+	background: -ms-linear-gradient(top, #194775, #A2B3C3) !important;
+	background: -o-linear-gradient(top, #194775, #A2B3C3) !important;	
+	display:block;
+}
+
+.sml-caret
+{
+	margin-left: 2px;
+	vertical-align: middle;
+	border-top: 4px solid #CCCCCC !important;
+	border-right: 4px solid transparent;
+	border-bottom: 0 dotted;
+	border-left: 4px solid transparent;
+}
+
+.box
+{
+	border: 1px solid #C2C2C2; 
+	border-radius:5px; 
+	background-color:#FFF; 
+	box-shadow: 0px 5px 10px #CCC; 
+	padding-bottom:30px;
+}
+
+.box-movie
+{
+	float:left;
+	width:185px;
+	border-radius:0px;
+	/*min-height:230px;*/
+	overflow:hidden;
+	padding: 15px;
+	margin-top:30px;
+	margin-bottom:0px;
+	margin-right:0px;
+	margin-left:30px;
+}
+
+.box-cast
+{
+	border-radius:0px;
+	/*min-height:230px;*/
+	overflow:hidden;
+	padding: 15px;
+	margin-top:30px;
+	margin-bottom:0px;
+	margin-right:0px;
+	margin-left:30px;
+}
+
+.footer
+{
+	background:url('img/footer-light.jpg');
+	background-repeat:repeat-x;
+	color:white;
+	margin:0px 0px 0px 0px;
+	margin-bottom:0px; 
+	border-radius:0px;
+	min-height:150px;
+	font-family:"Trebuchet MS", Helvetica, sans-serif;
+    font-size:16px;
+    color:#C0C0C0;
+}
+
+.footer a:link
+{
+    text-decoration:none;
+    color:#C0C0C0;
+}
+    
+.footer a:visited
+{
+    text-decoration:none;
+    color:#C0C0C0;
+}
+    
+.footer a:hover
+{
+    text-decoration:none;
+    color:White;
+}
+    
+.footer a:active
+{
+    text-decoration:none;
+    color:#C0C0C0;
+}
