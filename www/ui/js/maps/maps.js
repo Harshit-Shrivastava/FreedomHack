@@ -1,6 +1,7 @@
 var geocoder;
 var map;
 var directionsService;
+var markerArray;
 function initialize() {
   geocoder = new google.maps.Geocoder();
   directionsService = new google.maps.DirectionsService();
@@ -38,6 +39,14 @@ function calcRoute(start, end) {
       avoidTolls: false
 
   };
+
+  // First, remove any existing markers from the map.
+  for (var i = 0; i < markerArray.length; i++) {
+    markerArray[i].setMap(null);
+  }
+
+  // Now, clear the array itself.
+  markerArray = [];
 
   // Route the directions and pass the response to a
   // function to create markers for each step.
