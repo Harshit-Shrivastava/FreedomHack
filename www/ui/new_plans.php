@@ -5,8 +5,33 @@
 	<title>
 		GoGreen
 	</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
 	<link type="text/css" rel="stylesheet" href="bootstrap/css/bootstrap.css" />
 	<link type="text/css" rel="stylesheet" href="bootstrap/css/stylesheet.css" />
+	<script>
+		function loadPage()
+            {
+                var xmlhttp;
+                if (window.XMLHttpRequest)
+                {// code for IE7+, Firefox, Chrome, Opera, Safari
+                    xmlhttp=new XMLHttpRequest();
+                }
+                else
+                {// code for IE6, IE5
+                    xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+                }
+                xmlhttp.onreadystatechange=function()
+                {
+                    if (xmlhttp.readyState==4 && xmlhttp.status==200)
+                    {
+                        document.getElementById("map-canvas").innerHTML=xmlhttp.responseText;
+                    }
+                }
+                xmlhttp.open("GET","maptest.html",true);
+                xmlhttp.send();
+            }
+
+	</script>
 </head>
 
 <body>
@@ -61,7 +86,7 @@
 							<br/>
 							<br/>
 							<!--Starting place for the form-->
-							<form class="form-inline" role="form" action="maptest" method="get">
+							<form class="form-inline" role="form">
   								<div class="form-group">
     								<label class="sr-only" for="source">Source</label>
     								<input type="text" class="form-control" id="source" placeholder="Enter Source">
@@ -70,11 +95,12 @@
     								<label class="sr-only" for="destination">Destination</label>
     								<input type="text" class="form-control" id="destination" placeholder="Enter Destination">
   								</div>
-  								<button type="submit" class="btn btn-primary">Find</button>
+  								<button class="btn btn-primary" onclick="loadPage();">Find</button>
 							</form>
 							<!--Ending place for the form-->
 							<br/>
 							<br/>
+							<div id="map-canvas" class="container"></div>
 						</div>
 					</div>
 					<br/>
