@@ -137,3 +137,10 @@
     text-decoration:none;
     color:#C0C0C0;
 }
+
+#map-canvas
+{
+    margin: 0px;
+    padding: 0px;
+    z-index:1 !important;
+}

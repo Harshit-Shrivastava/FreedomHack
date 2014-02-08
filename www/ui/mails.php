@@ -5,8 +5,8 @@
 	<title>
 		GoGreen
 	</title>
-	<link type="text/css" rel="stylesheet" href="ui/bootstrap/css/bootstrap.css" />
-	<link type="text/css" rel="stylesheet" href="ui/bootstrap/css/stylesheet.css" />
+	<link type="text/css" rel="stylesheet" href="bootstrap/css/bootstrap.css" />
+	<link type="text/css" rel="stylesheet" href="bootstrap/css/stylesheet.css" />
 </head>
 
 <body>
@@ -32,10 +32,10 @@
 			<!--Creating other links and button in navbar-->
 			<div class="navbar-collapse collapse">
 				<ul class="nav navbar-nav">
-					<li><a href="ui/mails">Mails</a></li>
-					<li><a href="ui/new_plans">New Plans</a></li>
-					<li><a href="ui/faqs">FAQs</a></li>
-					<li><a href="ui/settings">Settings</a></li>
+					<li><a href="mails">Mails</a></li>
+					<li><a href="new_plans">New Plans</a></li>
+					<li><a href="faqs">FAQs</a></li>
+					<li><a href="settings">Settings</a></li>
 				</ul>
 			</div>
 		</div>
@@ -65,7 +65,7 @@
 				<br/>
 				<div class="row">
 					<div class="col-xs-12 col-md-12" style="position:absolute; bottom:0px;">
-						<center><img src="ui/images_ads/horizontal.png" class="img-responsive" alt="ads" /></center>
+						<center><img src="images_ads/horizontal.png" class="img-responsive" alt="ads" /></center>
 					</div>
 				</div>
 			
@@ -73,7 +73,7 @@
 			<div class="col-md-2 pull-right hidden-xs" id="right-side pane" style="overflow:hidden">
 				<div class="row">
 					<div class="">
-						<img src="ui/images_ads/skyscraper.png" class="img-responsive" alt="ads" />
+						<img src="images_ads/skyscraper.png" class="img-responsive" alt="ads" />
 					</div>
 					<br/><br/>
 
@@ -87,7 +87,7 @@
 	<!--Body content ends here-->
 
 	<!--Including the javascript files-->
-	<script src="ui/bootstrap/js/jquery.js"></script>
-	<script src="ui/bootstrap/js/bootstrap.js"></script>
+	<script src="bootstrap/js/jquery.js"></script>
+	<script src="bootstrap/js/bootstrap.js"></script>
 </body>
 </html>
