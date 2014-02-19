@@ -5,6 +5,7 @@
 	<title>
 		GoGreen
 	</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
 	<link type="text/css" rel="stylesheet" href="ui/bootstrap/css/bootstrap.css" />
 	<link type="text/css" rel="stylesheet" href="ui/bootstrap/css/stylesheet.css" />
 </head>
