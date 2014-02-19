@@ -64,9 +64,7 @@
 				<br/>
 				<br/>
 				<div class="row">
-					<div class="col-xs-12 col-md-12" style="position:absolute; bottom:0px;">
-						<center><img src="images_ads/horizontal.png" class="img-responsive" alt="ads" /></center>
-					</div>
+					
 				</div>
 			
 			</div>

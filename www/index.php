@@ -33,10 +33,10 @@
 			<!--Creating other links and button in navbar-->
 			<div class="navbar-collapse collapse">
 				<ul class="nav navbar-nav">
-					<li><a href="ui/mails">Mails</a></li>
-					<li><a href="ui/new_plans">New Plans</a></li>
-					<li><a href="ui/faqs">FAQs</a></li>
-					<li><a href="ui/settings">Settings</a></li>
+					<li><a href="ui/mails.php">Mails</a></li>
+					<li><a href="ui/new_plans.php">New Plans</a></li>
+					<li><a href="ui/faqs.php">FAQs</a></li>
+					
 				</ul>
 			</div>
 		</div>
@@ -46,7 +46,19 @@
 	<br/><br/><br/>
 
 	<!--Body content starts here-->
-	
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+	<center>
+		<img src="ui/images_ads/title.png" class="img-responsive" />
+		<br/>
+		Hacked on by the G@ngOf011
+		<br/>
+		Harshit Shrivastava, Saurabh Sood, Karan Dwivedi
+	</center>
 
 	<!--Body content ends here-->
 
