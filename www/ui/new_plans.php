@@ -5,32 +5,10 @@
 	<title>
 		GoGreen
 	</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
 	<link type="text/css" rel="stylesheet" href="bootstrap/css/bootstrap.css" />
 	<link type="text/css" rel="stylesheet" href="bootstrap/css/stylesheet.css" />
-	<script>
-		function loadPage()
-            {
-                var xmlhttp;
-                if (window.XMLHttpRequest)
-                {// code for IE7+, Firefox, Chrome, Opera, Safari
-                    xmlhttp=new XMLHttpRequest();
-                }
-                else
-                {// code for IE6, IE5
-                    xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-                }
-                xmlhttp.onreadystatechange=function()
-                {
-                    if (xmlhttp.readyState==4 && xmlhttp.status==200)
-                    {
-                        document.getElementById("map-canvas").innerHTML=xmlhttp.responseText;
-                    }
-                }
-                xmlhttp.open("GET","maptest.html",true);
-                xmlhttp.send();
-            }
-
+	<script type="text/javascript">
+		
 	</script>
 </head>
 
@@ -57,10 +35,10 @@
 			<!--Creating other links and button in navbar-->
 			<div class="navbar-collapse collapse">
 				<ul class="nav navbar-nav">
-					<li><a href="mails">Mails</a></li>
-					<li><a href="new_plans">New Plans</a></li>
-					<li><a href="faqs">FAQs</a></li>
-					<li><a href="settings">Settings</a></li>
+					<li><a href="mails.php">Mails</a></li>
+					<li><a href="new_plans.php">New Plans</a></li>
+					<li><a href="faqs.php">FAQs</a></li>
+					
 				</ul>
 			</div>
 		</div>
@@ -82,25 +60,28 @@
 					<div class="col-xs-12 col-md-12 box" style="min-height:200px">
 						<div class="row">
 							<br/>
-							Please share your travel details with us
+							&nbsp;&nbsp;
+							Please enter your travel details with us
 							<br/>
 							<br/>
 							<!--Starting place for the form-->
-							<form class="form-inline" role="form">
+							<form class="form-inline" role="form" action="maptest.php" >
+  								&nbsp;&nbsp;
   								<div class="form-group">
     								<label class="sr-only" for="source">Source</label>
-    								<input type="text" class="form-control" id="source" placeholder="Enter Source">
+    								<input type="text" class="form-control" name="source" id="source" placeholder="Enter Source">
   								</div>
+  								&nbsp;&nbsp;
   								<div class="form-group">
     								<label class="sr-only" for="destination">Destination</label>
-    								<input type="text" class="form-control" id="destination" placeholder="Enter Destination">
+    								<input type="text" class="form-control" name="destination" id="destination" placeholder="Enter Destination">
   								</div>
-  								<button class="btn btn-primary" onclick="loadPage();">Find</button>
+  								&nbsp;&nbsp;
+  								<input type="submit" class="btn btn-primary" value="Find"></input>
 							</form>
 							<!--Ending place for the form-->
 							<br/>
 							<br/>
-							<div id="map-canvas" class="container"></div>
 						</div>
 					</div>
 					<br/>
@@ -108,9 +89,7 @@
 				<br/>
 				<br/>
 				<div class="row">
-					<div class="col-xs-12 col-md-12" style="position:absolute; bottom:0px;">
-						<center><img src="images_ads/horizontal.png" class="img-responsive" alt="ads" /></center>
-					</div>
+					
 				</div>
 			
 			</div>

@@ -8,6 +8,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
 	<link type="text/css" rel="stylesheet" href="bootstrap/css/bootstrap.css" />
 	<link type="text/css" rel="stylesheet" href="bootstrap/css/stylesheet.css" />
+	<script src="bootstrap/js/jquery.js"></script>
 </head>
 
 <body>
@@ -25,7 +26,7 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a href="index" class="navbar-brand" style="font-size:30px;font-family:'Trebuchet MS', Helvetica, sans-serif;">
+				<a href="../index" class="navbar-brand" style="font-size:30px;font-family:'Trebuchet MS', Helvetica, sans-serif;">
 					<b><font color="#CCCCCC">Go</font><font color="#9B9B9B">Green</font></b>
 				</a>
 			</div>
@@ -33,10 +34,10 @@
 			<!--Creating other links and button in navbar-->
 			<div class="navbar-collapse collapse">
 				<ul class="nav navbar-nav">
-					<li><a href="mails">Mails</a></li>
-					<li><a href="new_plans">New Plans</a></li>
-					<li><a href="faqs">FAQs</a></li>
-					<li><a href="settings">Settings</a></li>
+					<li><a href="mails.php">Mails</a></li>
+					<li><a href="new_plans.php">New Plans</a></li>
+					<li><a href="faqs.php">FAQs</a></li>
+					
 				</ul>
 			</div>
 		</div>
@@ -56,18 +57,87 @@
 					<br/>
 					Here 's your next travel plan
 					<br/><br/>
-					<div class="col-xs-12 col-md-12 box" style="min-height:200px">
 
+					<script type="text/javascript">
+						  var msg_date;
+						  var arrival_time=new Array();
+						  var departure_time = new Array();
+						  var arrivals = new Array();
+						  var departures = new Array();
+						  $.getJSON("mailfetcher.php", function( data ) {
+       							//initialize(data);
+       							msg_date = data.flight_date;
+       							for (var i = 0; i < 3; i++) {
+       								arrival_time[i]=data.arrival_time[i];
+       								departure_time[i]=data.departure_times[i];
+       								arrivals[i] = data.arrivals[i];
+       								departures[i]=data.departures[i];
+
+       								var $flight_i = $('<div/>', {
+       									'class': 'col-xs-12 col-md-12 box'
+       								});
+
+       								var $row = $('<div/>', {
+       									'class': 'row'
+       								});
+
+       								var $dep = $('<div/>', {
+       									'class': 'col-xs-4 col-md-4'
+       								});
+
+       								var $flight = $('<div/>', {
+       									'class': 'col-xs-4 col-md-4'
+       								});
+
+       								var $arr = $('<div/>', {
+       									'class': 'col-xs-4 col-md-4'
+       								});
+
+
+       								$dep.append("<h3>" + departures[i] + "</h3><br />");
+       								$dep.append("<h4>" + departure_time[i] + "</h4><br />");
+
+       								$flight.append("<br/><img src='images_ads/flight.png' class='img-responsive' alt='Travelling to'/>");
+
+       								$arr.append("<h3>" + arrivals[i] + "</h3><br />");
+       								$arr.append("<h4>" + arrival_time[i] + "</h4>");
+
+       								$row.append($dep);
+       								$row.append($flight);
+       								$row.append($arr);
+
+       								$row.trigger('create');
+       								$arr.trigger('create');
+       								$dep.trigger('create');
+       								$flight.trigger('create');
+       								$flight_i.append($row);
+       								$flight_i.append("<br/>");
+
+       								var $a = $('<a/>', {
+       									'href': 'maptest.php?source=' + departures[i] + '&destination=' + arrivals[i]
+       								});
+
+
+       								$a.append($flight_i);
+
+       								$('#map-data').append($a);
+       								$flight_i.trigger('create');
+									
+									      								
+       							};
+   						});
+
+					</script>
+					<div id="map-data">
+						
 					</div>
 					<br/>
-					Your carbon imprint on this travel would be : 
+
 				</div>
 				<br/>
 				<br/>
 				<div class="row">
-					<div class="col-xs-12 col-md-12" style="position:absolute; bottom:0px;">
-						<center><img src="images_ads/horizontal.png" class="img-responsive" alt="ads" /></center>
-					</div>
+					
 				</div>
 			
 			</div>
@@ -88,7 +158,7 @@
 	<!--Body content ends here-->
 
 	<!--Including the javascript files-->
-	<script src="bootstrap/js/jquery.js"></script>
+	
 	<script src="bootstrap/js/bootstrap.js"></script>
 </body>
 </html>
